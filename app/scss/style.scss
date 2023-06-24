@@ -1,0 +1,140 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+.header {
+  background-color: #e1ede6;
+  padding: 33px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  &__menu {
+    display: flex;
+  }
+  &__list {
+    padding-right: 60px;
+  }
+  &__link {
+    color: $title;
+  }
+}
+
+.replica {
+  padding-bottom: 70px;
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__content {
+    max-width: 540px;
+    margin-left: 30px;
+  }
+  &__title {
+    @extend %Raleway-500;
+    font-size: 60px;
+    line-height: 66px;
+    margin-bottom: 20px;
+    span {
+      color: #598d66;
+      padding-left: 10px;
+    }
+  }
+  &__subtitle {
+    font-size: 18px;
+    @extend %Raleway-500;
+    margin-bottom: 60px;
+    line-height: 150%;
+  }
+  &__link {
+    padding: 20px 60px;
+    border: 1px solid #598d66;
+    font-size: 20px;
+    color: #598d66;
+  }
+}
+.reproductions {
+  padding-bottom: 70px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-size: 40px;
+    line-height: 110%;
+    @extend %Raleway-500;
+  }
+  &__btn {
+    color: $title;
+    font-size: 20px;
+    @extend %Raleway-500;
+    border: none;
+    background-color: #d4e8d9;
+    border-radius: 20px;
+    padding: 10px 20px;
+  }
+  &__btn + .reproductions__btn {
+    margin-left: 30px;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+  
+  }
+  &__item {
+    background-color: #e1ede6;
+    max-width: 350px;
+    padding: 20px 20px 30px 20px;
+    color: $title;
+  }
+  &__item-title {
+    font-size: 18px;
+    color: $text;
+    @extend %Raleway-500;
+    margin: 20px 0 10px;
+  }
+  &__item-name {
+    font-size: 30px;
+    color: $title;
+    margin-bottom: 8px;
+    @extend %Raleway-500;
+    line-height: 35px;
+  }
+  &__item-subtitle {
+    color: $title;
+    margin-bottom: 30px;
+    @extend %Raleway-500;
+  }
+  &__item-label {
+    color: #598d66;
+    font-size: 24px;
+    @extend %Raleway-500;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+  &__item-btn{
+    display: block;
+    @extend %btn;
+    width: 310px;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+.reproductions__btn--active {
+  color: #f4f6f5;
+  background-color: #376b44;
+}
+
+@import "media";
